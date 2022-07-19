@@ -1,0 +1,14 @@
+image:
+  repository: artifactory.dagility.com/docker/project_from_template_id-frontend
+  tag: latest
+  pullPolicy: Always
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: nginx-internal
+  hosts:
+  - host: project_from_template_id-frontend-default.dagility.com
+    paths:
+    - /
+serviceAccount:
+  create: false
